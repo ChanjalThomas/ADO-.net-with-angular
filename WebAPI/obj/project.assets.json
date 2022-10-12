@@ -667,11 +667,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cthomas\\Downloads\\WebApiAngular12\\WebApiAngular12\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\Angular_Projects\\ADO-.net-with-angular\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\cthomas\\Downloads\\WebApiAngular12\\WebApiAngular12\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\Angular_Projects\\ADO-.net-with-angular\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\cthomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cthomas\\Downloads\\WebApiAngular12\\WebApiAngular12\\WebAPI\\WebAPI\\obj\\",
+      "outputPath": "D:\\Angular_Projects\\ADO-.net-with-angular\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cthomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
