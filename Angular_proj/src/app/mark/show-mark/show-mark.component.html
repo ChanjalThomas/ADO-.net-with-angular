@@ -1,0 +1,63 @@
+<button type = "button" class="btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#example"
+(click)="addClick()" data-keyboard = "false">
+Create
+</button>
+
+
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Department Name</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let datas of markList" >
+            <td>{{datas.MarkId}}</td>
+            <td data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editClick(datas)">{{datas.FullName}}</td> 
+            <td>{{datas.DepartmentName}}</td>
+            <td>{{datas.Mark}}</td>
+            <td>
+                  <button type="button" class="btn btn-primary" (click)="deleteClick(datas)">Delete</button>
+              </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{markSheet}}</h5>
+                <button type="button" class="btn-close" (click)="closeClick()" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <app-add-edit-mark [mark] = "mark" *ngIf = "activate"></app-add-edit-mark>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="example" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{markSheet}}</h5>
+                <button type="button" class="btn-close" (click)="closeClick()" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <app-add-mark [mark] = "mark" *ngIf = "activate"></app-add-mark>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+

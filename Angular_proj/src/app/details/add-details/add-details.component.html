@@ -1,0 +1,40 @@
+<div>
+    <form [formGroup]="detailForm">
+        <div class="name">
+            <label class="col-sm-2">FullName</label>
+            <select required style="width: 50%; margin-left: 65px;" formControlName="studentId">
+                <option [ngValue]="null" disabled>Select Name</option>
+                <option  *ngFor="let name of Student"[ngValue]="name.StudentId" >  
+                {{name.FullName}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group row address">
+            <label class="col-sm-2">Address</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"
+                placeholder="Enter Address" id="address" style="width: 60%; border-color: black; margin-left: 65px;" formControlName="address">
+            </div>
+        </div>
+        <div class="department">
+            <label class="col-sm-2">DepartmentName</label>
+            <select style="width: 50%; margin-left: 65px;" formControlName="departmentId">
+                <option [ngValue]="null" disabled>Select Department</option>
+                <option *ngFor="let depart of Department" [ngValue]="depart.DepartmentId"  > 
+                    {{depart.DepartmentName}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group row gender">
+            <label class="col-sm-2">Gender</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"
+                placeholder="Gender" id="mark" style="width: 60%; border-color: black; margin-left: 65px;" formControlName="gender">
+            </div>
+        </div>
+        <button (click)="addMark()" class="btn btn-primary">
+            Add
+        </button>
+    </form>
+    </div>
+    

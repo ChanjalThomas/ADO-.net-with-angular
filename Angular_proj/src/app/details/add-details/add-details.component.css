@@ -1,0 +1,16 @@
+.address{
+    position: relative;
+    top: 10px;
+}
+.department{
+    position: relative;
+    top: 20px;
+}
+.gender{
+    position: relative;
+    top: 30px;
+}
+button{
+    position: relative;
+    top: 72px;
+}
