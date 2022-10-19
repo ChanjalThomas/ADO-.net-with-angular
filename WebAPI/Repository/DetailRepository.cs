@@ -38,8 +38,9 @@ namespace WebAPI.Repository
         }
         public string CreateDetails(StudentDetails detail)
         {
-            string query = @"Insert INTO StudentDetails (StudentId, Address, DepartmentId, Gender)
-                                Values " + (detail.StudentId, detail.Address, detail.DepartmentId, detail.Gender);
+            string query = @"Insert INTO StudentDetails (StudentId, Address, DepartmentId, Gender) Values( " + detail.StudentId +", \'" + detail.Address + "\'," + detail.DepartmentId +",\'" + detail.Gender + "\')"; 
+
+                                //'+ detail.Address +'", detail.DepartmentId, detail.Gender);
             DataTable data = new DataTable();
             string conn = _configuration.GetConnectionString("StudentAppCon");
             SqlDataReader reader;
